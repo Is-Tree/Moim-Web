@@ -149,7 +149,7 @@ img{
 
 /* Responsive */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     html{
         scroll-behavior: smooth;
