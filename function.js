@@ -57,7 +57,7 @@ function handleBack(event){
             section.style.display = 'none';
         });
         back.classList.remove('back--active');
-    }, SLIDE_DURATION+300);
+    }, SLIDE_DURATION+200);
 }
 
 // About > Rotation on Scrolling
