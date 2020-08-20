@@ -112,6 +112,10 @@ img{
 
 @media (max-width: 768px){
 
+    html{
+        scroll-behavior: smooth;
+    }
+
     body{
         margin: 0;
     }
@@ -119,6 +123,7 @@ img{
     .viewer{
         display: flex;
         width: 10000px;
+        height: max-content;
     }
 
     nav{

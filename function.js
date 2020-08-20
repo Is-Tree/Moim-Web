@@ -27,12 +27,12 @@ function handlePick(event){
 
     setTimeout(function(){
             nav.classList.add('nav--active');
-            target.classList.add('nav--active'); },
-        0);
+            target.classList.add('nav--active');
+        }, 0);
 
     setTimeout(function(){
-            back.classList.add('back--active'); },
-        SLIDE_DURATION);
+            back.classList.add('back--active');
+        }, SLIDE_DURATION);
 
 }
 
@@ -40,24 +40,24 @@ function handleBack(event){
     event.preventDefault();
     const target = document.querySelector(`.${state}`);
 
-    target.scrollIntoView({behavior: "smooth"});
+    if( document.body.offsetWidth > 768){
+        target.scrollIntoView({behavior: "smooth"});
+    } else {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
     setTimeout(function() {
         nav.classList.remove('nav--active');
         target.classList.remove('nav--active');
-    },
-        300)
+    }, 300);
 
     setTimeout(function() {
-            sections.forEach( section => {
-                section.style.display = 'none';
-            });
-
-            back.classList.remove('back--active');
-        },
-        SLIDE_DURATION+300
-    );
-
+        sections.forEach( section => {
+            section.style.display = 'none';
+        });
+        back.classList.remove('back--active');
+    }, SLIDE_DURATION+300);
 }
 
 // About > Rotation on Scrolling
