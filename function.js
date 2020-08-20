@@ -1,5 +1,6 @@
 // Setting
-const SLIDE_DURATION = 500;
+const SLIDE_DURATION = 500,
+    RESPONSE_WIDTH = 768;
 
 // Navigation
 
@@ -25,13 +26,14 @@ function handlePick(event){
     })
 
     setTimeout(function(){
-        nav.classList.add('nav--active');
-        target.classList.add('nav--active'); },
+            nav.classList.add('nav--active');
+            target.classList.add('nav--active'); },
         0);
 
     setTimeout(function(){
             back.classList.add('back--active'); },
         SLIDE_DURATION);
+
 }
 
 function handleBack(event){
@@ -40,16 +42,22 @@ function handleBack(event){
 
     target.scrollIntoView({behavior: "smooth"});
 
-    nav.classList.remove('nav--active');
-    target.classList.remove('nav--active');
-    setTimeout( function(){
+    setTimeout(function() {
+        nav.classList.remove('nav--active');
+        target.classList.remove('nav--active');
+    },
+        300)
+
+    setTimeout(function() {
             sections.forEach( section => {
                 section.style.display = 'none';
             });
-        },
-        SLIDE_DURATION);
 
-    back.classList.remove('back--active');
+            back.classList.remove('back--active');
+        },
+        SLIDE_DURATION+300
+    );
+
 }
 
 // About > Rotation on Scrolling
