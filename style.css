@@ -15,6 +15,7 @@
 
 *{
     box-sizing: border-box;
+    border: 1px solid black;
 }
 
 body{
@@ -119,13 +120,17 @@ img{
     text-align: center;
 }
 
+.contact__info>div{
+    padding: 10px;
+}
+
 .contact__email{
     display: flex;
     flex-direction: column;
 }
 
 .contact__email>*{
-    margin: 5px 20px;
+    margin: 5px 50px;
     padding: 3px 10px;
     font-size: var(--font-micro);
 }
@@ -144,7 +149,7 @@ img{
 
 /* Responsive */
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
     html{
         scroll-behavior: smooth;
@@ -163,6 +168,10 @@ img{
     nav{
         display: flex;
         width: 100vw;
+    }
+
+    .nav__content{
+        height: 100%;
     }
 
     .nav__pickers{
@@ -184,5 +193,4 @@ img{
     .nav--active{
         transform: translateX(-100vw);
     }
-
 }
