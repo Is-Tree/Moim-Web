@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Tae Bong </title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Introduction of Moim">
@@ -14,7 +14,7 @@
     <div class="viewer">
         <nav class="nav">
             <div class="nav__content">
-                Moi'm
+                태 봉 정 밀
             </div>
             <ul class="nav__pickers">
                 <li class="nav__picker nav__picker--about" data-id="about">About</li>
@@ -22,6 +22,7 @@
                 <li class="nav__picker nav__picker--contact" data-id="contact">Contact</li>
                 <li class="nav__picker nav__picker--else" data-id="else">...</li>
             </ul>
+            <div class="nav__wave down_100vh"></div>
         </nav>
         <section class="about">
             <div class="container">
@@ -76,11 +77,16 @@
                 <textarea class="contact__email--message" type="text" placeholder="Message"></textarea>
                 <button class="contact__email--btn">Send</button>
             </div>
+            <div class="map__container">
+                <h3>Contact</h3>
+                <div class="map"></div>
+            </div>
         </section>
         <section class="else">
             else
         </section>
     </div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
     <script src="function.js"></script>
     <script src="https://kit.fontawesome.com/9bf4efd52c.js" crossorigin="anonymous"></script>
 </body>
