@@ -2,25 +2,39 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> 태봉정밀 </title>
+    <title> 태봉정밀2 </title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Introduction of Moim">
     <meta name="author" content="Song Mok Lee">
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <span class="back">Back←</span>
     <div class="viewer">
         <nav class="nav">
+            <div class="nav__img"></div>
             <div class="nav__content">
                 태 봉 정 밀
             </div>
             <ul class="nav__pickers">
-                <li class="nav__picker nav__picker--about" data-id="about">About</li>
-                <li class="nav__picker nav__picker--team" data-id="team">Team</li>
-                <li class="nav__picker nav__picker--contact" data-id="contact">Contact</li>
-                <li class="nav__picker nav__picker--else" data-id="else">...</li>
+                <li class="nav__section">
+                    <h3 class="nav__header nav__header--about">ABOUT</h3>
+                    <div class="nav__picker nav__picker--about" data-id="about"></div>
+                </li>
+                <li class="nav__section">
+                    <h3 class="nav__header nav__header--team">TEAM</h3>
+                    <div class="nav__picker nav__picker--team" data-id="team"></div>
+                </li>
+                <li class="nav__section">
+                    <h3 class="nav__header nav__header--contact">CONTACT</h3>
+                    <div class="nav__picker nav__picker--contact" data-id="contact"></div>
+                </li>
+                <li class="nav__section">
+                    <h3 class="nav__header nav__header--else">ELSE</h3>
+                    <div class="nav__picker nav__picker--else" data-id="else"></div>
+                </li>
             </ul>
             <div class="nav__wave down_100vh"></div>
         </nav>
@@ -61,12 +75,12 @@
             <div class="contact__info">
                 <div>
                     <h3>Address</h3>
-                    <div>Lorem ipsum dolor sit amet</div>
+                    <div>경북 경산시 자인면 북사리 1085-6</div>
                 </div>
                 <div>
                     <h3>Contact</h3>
-                    <p> T. 000-000-0000 <br>
-                        F. 000-000-0000 <br>
+                    <p> T. 053-354-8632 <br>
+                        F. 053-354-8633 <br>
                         KaKao. USER_ID
                     </p>
                 </div>
@@ -78,7 +92,7 @@
                 <button class="contact__email--btn">Send</button>
             </div>
             <div class="map__container">
-                <h3>Contact</h3>
+                <h3>Location</h3>
                 <div class="map"></div>
             </div>
         </section>

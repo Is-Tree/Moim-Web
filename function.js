@@ -61,6 +61,7 @@ var customOverlay = new kakao.maps.CustomOverlay({
 // Navigation
 
 const pickers = document.querySelectorAll('.nav__picker'),
+    headers = document.querySelectorAll('.nav__header'),
     nav = document.querySelector('.nav'),
     sections = document.querySelectorAll('section'),
     back = document.querySelector('.back'),
@@ -94,6 +95,14 @@ function handlePick(event){
     }
 
     wave.classList.remove('down_100vh');
+
+    setTimeout( function(){
+            headers.forEach( header => {
+                header.classList.add('up_150vh');
+            })
+        },
+        DURATION_SHORT);
+
 
     setTimeout( function(){
             pickers.forEach( picker => {
@@ -130,6 +139,14 @@ function handleBack(event){
             })
     },
         DURATION_SHORT);
+
+    setTimeout( function(){
+            headers.forEach( header => {
+                header.classList.remove('up_150vh');
+            })
+        },
+        DURATION_REGULAR);
+
 
     setTimeout( function(){
             wave.classList.add('down_100vh');
